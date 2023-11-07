@@ -3,39 +3,135 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Home Panipao</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 </head>
 <body class="bg-secondary-subtle">
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#">Navbar</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="home">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="cadastro">CadastroPessoa</a>
-              </li> 
-              <li class="nav-item">
-                <a class="nav-link" href="cadastroPaniPao">CadastroProduto</a>
-              </li> 
-            </ul>
+  <nav class="navbar navbar-expand-lg bg-secondary">
+    <div class="w-100">
+      <a class="navbar-brand d-flex align-self-center justify-content-center" href="/">
+        <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="#ffffff" class="bi bi-shop-window" viewBox="0 0 16 16">
+          <path d="M2.97 1.35A1 1 0 0 1 3.73 1h8.54a1 1 0 0 1 .76.35l2.609 3.044A1.5 1.5 0 0 1 16 5.37v.255a2.375 2.375 0 0 1-4.25 1.458A2.371 2.371 0 0 1 9.875 8 2.37 2.37 0 0 1 8 7.083 2.37 2.37 0 0 1 6.125 8a2.37 2.37 0 0 1-1.875-.917A2.375 2.375 0 0 1 0 5.625V5.37a1.5 1.5 0 0 1 .361-.976l2.61-3.045zm1.78 4.275a1.375 1.375 0 0 0 2.75 0 .5.5 0 0 1 1 0 1.375 1.375 0 0 0 2.75 0 .5.5 0 0 1 1 0 1.375 1.375 0 1 0 2.75 0V5.37a.5.5 0 0 0-.12-.325L12.27 2H3.73L1.12 5.045A.5.5 0 0 0 1 5.37v.255a1.375 1.375 0 0 0 2.75 0 .5.5 0 0 1 1 0zM1.5 8.5A.5.5 0 0 1 2 9v6h12V9a.5.5 0 0 1 1 0v6h.5a.5.5 0 0 1 0 1H.5a.5.5 0 0 1 0-1H1V9a.5.5 0 0 1 .5-.5zm2 .5a.5.5 0 0 1 .5.5V13h8V9.5a.5.5 0 0 1 1 0V13a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9.5a.5.5 0 0 1 .5-.5z"/>
+        </svg>
+      </a>  
+      
+        <ul class="navbar-nav mb-2 mb-lg-0 d-flex flex-row align-items-end justify-content-end">
+          <li class="nav-item flex-grow-1">
+            <a class="nav-link text-light ms-2" href="/">PaniPao</a>
+          </li> 
+          <li class="nav-item">
+            <a class="nav-link text-light ms-2" href="cadastro">Cadastro Pessoa</a>
+          </li> 
+          <li class="nav-item">
+            <a class="nav-link text-light ms-2" href="cadastroPaniPao">Cadastro Produto</a>
+          </li> 
+        </ul>
+    </div>
+  </nav>
+      <div id="carousel" class="carousel slide">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner" style="height: 30rem;">
+          <div class="carousel-item active">
+            <img 
+              src="https://img.freepik.com/fotos-premium/cesta-com-paes-franceses-pao-frances-tradicional-pao-brasileiro_434193-395.jpg?w=740" 
+              class="d-block w-100 img-fluid" 
+              alt="..."
+            >
+          </div>
+          <div class="carousel-item">
+            <img 
+              src="https://img.freepik.com/fotos-gratis/vista-superior-produtos-de-panificacao-com-cevada-na-tabua-e-woooden-superficie-horizontal_176474-6251.jpg?w=740&t=st=1699355888~exp=1699356488~hmac=6623abb6401012b823a0483ed38961d10ef3b62d489f6952faff8a6e16475429" 
+              class="d-block w-100 img-fluid" 
+              alt="..."
+            >
+          </div>
+          <div class="carousel-item">
+            <img 
+              src="https://img.freepik.com/fotos-gratis/uma-padaria-com-uma-montra-de-pastelaria-e-pastelaria_188544-40882.jpg?w=900&t=st=1699356437~exp=1699357037~hmac=16ef7946df4479561ac0d1122ab9006325b4084c226b0dc9de159001cdb194ad" 
+              class="d-block w-100 img-fluid" 
+              alt="..."
+            >
           </div>
         </div>
-      </nav>
-      <div class="bg-secondary-subtle">
-        <h1 class="ms-3 mt-3">
-            Bem vindo a Panipao
-        </h1>
-        <h5 class="ms-3 fw-light">
-            A melhor padaria do mundo!
-        </h5>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next text-dark" type="button" data-bs-target="#carousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
       </div>
+
+      <div class="mt-3 ms-3">
+        <h1 class="ms-3 mb-4">Nossos produtos</h1>
+        <div class="row row-cols-1 row-cols-md-2 ms-1 me-2">
+          <div class="col mb-3">
+            <div class="card d-flex flex-row rounded-0">
+              <img 
+                src="https://img.freepik.com/fotos-gratis/padaria-pao-sourdough-caseiro-saudavel_1203-5438.jpg?w=740&t=st=1699360747~exp=1699361347~hmac=0cc02360b591fb22faa5ef781c8bfed9c57e2d02f69133ff273399eb07e47060" 
+                class="card-img-top w-50" 
+                alt="..."
+                >
+              <div class="card-body d-flex justify-content-center flex-column">
+                <h5 class="card-title mt-2  ">Pão Francês</h5>
+                <p class="card-text">Nosso clássico pão francês sem conservantes.</p>
+                <button type="button" class="btn btn-outline-secondary">Adicionar ao carrinho</button>
+              </div>
+            </div>
+          </div>
+          <div class="col mb-3">
+            <div class="card d-flex flex-row">
+              <img 
+                src="https://img.freepik.com/fotos-gratis/padaria-pao-sourdough-caseiro-saudavel_1203-5438.jpg?w=740&t=st=1699360747~exp=1699361347~hmac=0cc02360b591fb22faa5ef781c8bfed9c57e2d02f69133ff273399eb07e47060" 
+                class="card-img-top w-50" 
+                alt="..."
+                >
+              <div class="card-body d-flex justify-content-center flex-column">
+                <h5 class="card-title mt-2  ">Pão Francês</h5>
+                <p class="card-text">Nosso clássico pão francês sem conservantes.</p>
+                <button type="button" class="btn btn-outline-secondary">Adicionar ao carrinho</button>
+              </div>
+            </div>
+          </div>
+          <div class="col mb-3">
+            <div class="card d-flex flex-row">
+              <img 
+                src="https://img.freepik.com/fotos-gratis/padaria-pao-sourdough-caseiro-saudavel_1203-5438.jpg?w=740&t=st=1699360747~exp=1699361347~hmac=0cc02360b591fb22faa5ef781c8bfed9c57e2d02f69133ff273399eb07e47060" 
+                class="card-img-top w-50" 
+                alt="..."
+                >
+              <div class="card-body d-flex justify-content-center flex-column">
+                <h5 class="card-title mt-2  ">Pão Francês</h5>
+                <p class="card-text">Nosso clássico pão francês sem conservantes.</p>
+                <button type="button" class="btn btn-outline-secondary">Adicionar ao carrinho</button>
+              </div>
+            </div>
+          </div>
+          <div class="col mb-3">
+            <div class="card d-flex flex-row">
+              <img 
+                src="https://img.freepik.com/fotos-gratis/padaria-pao-sourdough-caseiro-saudavel_1203-5438.jpg?w=740&t=st=1699360747~exp=1699361347~hmac=0cc02360b591fb22faa5ef781c8bfed9c57e2d02f69133ff273399eb07e47060" 
+                class="card-img-top w-50" 
+                alt="..."
+                >
+              <div class="card-body d-flex justify-content-center flex-column">
+                <h5 class="card-title mt-2  ">Pão Francês</h5>
+                <p class="card-text">Nosso clássico pão francês sem conservantes.</p>
+                <button type="button" class="btn btn-outline-secondary">Adicionar ao carrinho</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <nav class="navbar bottom navbar-expand-sm bg-secondary d-flex justify-content-center align-items-center">
+        <h1 class="fw-light text-light fs-6">Copyright PaniPao 2023</h1>
+      </nav>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </body>
 </html>

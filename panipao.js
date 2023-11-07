@@ -32,11 +32,29 @@ const paoSchema = new mongoose.Schema({
 })
 
 const Usuario = mongoose.model("Usuario", usuarioSchema)
-const Pao = mongoose.model("Pao", paoSchema)
+const Pao = mongoose.model("ProdutoPao", paoSchema)
+
+app.get("/", async(req,res)=>{
+    res.sendFile(__dirname+"/index.html")
+})
+
+app.get("/cadastro", async(req,res)=>{
+    res.sendFile(__dirname+"/cadastro.html")
+})
+
+app.get("/cadastroPaniPao", async(req,res)=>{
+    res.sendFile(__dirname+"/cadastroPaniPao.html")
+})
+
+app.listen(port, ()=>{
+    console.log(`Servidor rodando na porta ${port}`)
+})
 
 app.post("/cadastro",async(req,res)=>{
     const email = req.body.email
     const senha = req.body.senha 
+
+    console.log('bom dia')
 
     if ([email,senha].some(el => el == null) ) {          
         return res.status(400).json({error : "Campos não preenchidos"})
@@ -69,13 +87,19 @@ app.post("/cadastroPaniPao",async(req,res)=>{
     const quantidadeEstoque = req.body.quantidadeEstoque
 
     if ([id_produtopao,descricao,tipo,dataValidade,quantidadeEstoque].some(el => el == null) ) {          
+        console.log()
         return res.status(400).json({error : "Campos não preenchidos"})
     }
 
     const idExiste = await Pao.findOne({id_produtopao:id_produtopao})
 
+    // error checks
     if(idExiste) {
         return res.status(400).json({error : "Id do produto já Existe!"})
+    } else if(quantidadeEstoque > 21) {
+        return res.status(400).json({error : "Limite de estoque superado!"})
+    }  else if(quantidadeEstoque < 0) {
+        return res.status(400).json({error : "A quantidade de estoque deve ser superior a 0 e menor que 21."})
     }
 
     const paes = new Pao({
@@ -94,18 +118,3 @@ app.post("/cadastroPaniPao",async(req,res)=>{
     }
 })
 
-app.get("/", async(req,res)=>{
-    res.sendFile(__dirname+"/index.html")
-})
-
-app.get("/cadastro", async(req,res)=>{
-    res.sendFile(__dirname+"/cadastro.html")
-})
-
-app.get("/cadastroPaniPao", async(req,res)=>{
-    res.sendFile(__dirname+"/cadastroPaniPao.html")
-})
-
-app.listen(port, ()=>{
-    console.log(`Servidor rodando na porta ${port}`)
-})
