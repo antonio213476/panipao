@@ -54,8 +54,6 @@ app.post("/cadastro",async(req,res)=>{
     const email = req.body.email
     const senha = req.body.senha 
 
-    console.log('bom dia')
-
     if ([email,senha].some(el => el == null) ) {          
         return res.status(400).json({error : "Campos não preenchidos"})
     }
